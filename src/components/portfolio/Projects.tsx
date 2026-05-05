@@ -10,10 +10,10 @@ const projects: {
   title: string;
   category: Category;
   tag: string;
-  problem: string;
-  solution: string;
+  problem?: string;
+  solution?: string;
   tools: string[];
-  metric: string;
+  metric?: string;
 }[] = [
   {
     title: "wCookin",
@@ -121,7 +121,7 @@ export const Projects = () => {
                         <span className="w-2 h-2 rounded-full bg-primary/40" />
                         <span className="w-2 h-2 rounded-full bg-primary/40" />
                       </div>
-                      <span className="text-[10px] font-semibold text-primary">{p.metric}</span>
+                      {p.metric && <span className="text-[10px] font-semibold text-primary">{p.metric}</span>}
                     </div>
                     <div className="space-y-1.5">
                       <div className="h-2 rounded-full bg-primary/15 w-3/4" />
@@ -141,8 +141,8 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                <p className="mt-4 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Problem · </span>{p.problem}</p>
-                <p className="mt-2 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Solution · </span>{p.solution}</p>
+                {p.problem && <p className="mt-4 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Problem · </span>{p.problem}</p>}
+                {p.solution && <p className="mt-2 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Solution · </span>{p.solution}</p>}
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {p.tools.map(t => (
