@@ -10,10 +10,10 @@ const projects: {
   title: string;
   category: Category;
   tag: string;
-  problem: string;
-  solution: string;
+  problem?: string;
+  solution?: string;
   tools: string[];
-  metric: string;
+  metric?: string;
 }[] = [
   {
     title: "wCookin",
