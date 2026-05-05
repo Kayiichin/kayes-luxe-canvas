@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Download, FileText, Mail, MessageCircle, Linkedin, Facebook, Phone } from "lucide-react";
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", href: "www.linkedin.com/in/kaye-bearneza", handle: "/in/kaye" },
+  { icon: Linkedin, label: "LinkedIn", href: "www.linkedin.com/in/kaye-bearneza", handle: "Kaye Bearneza" },
   { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/chxn0402e", handle: "@chxn0402" },
   { icon: Mail, label: "Email", href: "kayebearnezaa@gmail.com", handle: "kayebearnezaa@gmail.com" },
   { icon: MessageCircle, label: "WhatsApp", href: "tel:+639940524366", handle: "+63 994 052 4366" },
