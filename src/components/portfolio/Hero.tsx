@@ -85,8 +85,7 @@ export const Hero = () => {
                 <a href="#contact">Let's Work Together</a>
               </Button>
             </div>
-
-        
+          </div>
 
           {/* Floating UI mockup */}
           <div className="lg:col-span-5 relative h-[500px] hidden lg:block">
