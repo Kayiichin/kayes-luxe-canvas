@@ -141,8 +141,8 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                <p className="mt-4 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Problem · </span>{p.problem}</p>
-                <p className="mt-2 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Solution · </span>{p.solution}</p>
+                {p.problem && <p className="mt-4 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Problem · </span>{p.problem}</p>}
+                {p.solution && <p className="mt-2 text-sm text-muted-foreground"><span className="font-semibold text-foreground">Solution · </span>{p.solution}</p>}
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {p.tools.map(t => (
