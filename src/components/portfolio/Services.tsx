@@ -1,11 +1,47 @@
 import { Reveal } from "./Reveal";
-import { Palette, LayoutTemplate, Globe, Megaphone } from "lucide-react";
+import { Palette, LayoutTemplate, Globe, Megaphone, Check } from "lucide-react";
 
 const services = [
-  { icon: Palette, title: "UX/UI Design", desc: "Intuitive, research-driven interfaces that put the user — and their next click — at the center." },
-  { icon: LayoutTemplate, title: "Landing Page Design", desc: "High-converting landing pages engineered for clarity, speed, and measurable performance." },
-  { icon: Globe, title: "Web Design", desc: "Beautiful, modern websites that scale gracefully across devices and grow with your brand." },
-  { icon: Megaphone, title: "Digital Marketing & Social", desc: "On-brand visuals and funnels that turn scrollers into subscribers and clicks into customers." },
+  {
+    icon: Palette,
+    title: "UX/UI Design",
+    desc: "Research-driven interfaces that feel effortless and put users at the center.",
+    items: [
+      "Wireframes & interactive prototypes",
+      "Scalable Figma design systems",
+      "Intuitive, user-friendly interfaces",
+    ],
+  },
+  {
+    icon: LayoutTemplate,
+    title: "Landing Page Design",
+    desc: "Pages engineered for clarity, speed and measurable performance.",
+    items: [
+      "High-converting landing pages",
+      "Sales, marketing & product pages",
+      "Startup and SaaS landing pages",
+    ],
+  },
+  {
+    icon: Globe,
+    title: "Web Design",
+    desc: "Modern, responsive websites that scale gracefully and grow with your brand.",
+    items: [
+      "Modern, responsive business websites",
+      "Personal portfolio websites",
+      "Redesigns & UI improvements for usability",
+    ],
+  },
+  {
+    icon: Megaphone,
+    title: "Digital Marketing & Social",
+    desc: "On-brand visuals and funnels that turn scrollers into customers.",
+    items: [
+      "Carousels, posts & reels visuals",
+      "Content calendar planning & scheduling",
+      "Brand-consistent marketing materials",
+    ],
+  },
 ];
 
 export const Services = () => {
@@ -15,10 +51,10 @@ export const Services = () => {
         <Reveal className="max-w-2xl">
           <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase">Services</span>
           <h2 className="mt-3 font-display font-extrabold text-4xl md:text-5xl text-foreground leading-tight">
-            Everything you need to <span className="text-gradient-violet">launch & grow</span>.
+            What I can help you <span className="text-gradient-violet">achieve</span>.
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            From first sketch to last A/B test — design that's beautiful, usable, and built to convert.
+            A multi-disciplinary toolkit — design, web and marketing — built around one goal: results.
           </p>
         </Reveal>
 
@@ -33,6 +69,16 @@ export const Services = () => {
                   </div>
                   <h3 className="mt-6 font-display font-bold text-xl text-foreground">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  <ul className="mt-5 space-y-2">
+                    {s.items.map((it) => (
+                      <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
+                        <span className="mt-0.5 w-4 h-4 rounded-full bg-gradient-violet grid place-items-center shrink-0">
+                          <Check className="w-2.5 h-2.5 text-primary-foreground" />
+                        </span>
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </Reveal>

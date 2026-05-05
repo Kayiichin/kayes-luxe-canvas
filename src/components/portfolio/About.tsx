@@ -24,9 +24,14 @@ export const About = () => {
               Strategy + design — built to <span className="text-gradient-violet">move metrics</span>.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              I'm Kaye, a Summa Cum Laude graduate who blends a UX research mindset with a marketer's
-              eye for conversion. I design clean, modern interfaces that feel effortless to users — and
-              measurably outperform for business.
+              I'm Kaye, a Summa Cum Laude graduate and multi-skilled designer working across
+              UX/UI, web design, landing pages and digital marketing. I blend a UX research
+              mindset with a marketer's eye for conversion — designing clean, modern interfaces
+              that feel effortless and measurably outperform for business.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              I've partnered with international clients, including Dubai-based brands, to ship
+              high-performing digital experiences end-to-end.
             </p>
 
             <div className="mt-8 grid sm:grid-cols-3 gap-4">
