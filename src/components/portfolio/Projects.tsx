@@ -10,8 +10,7 @@ const projects: {
   title: string;
   category: Category;
   tag: string;
-  problem?: string;
-  solution?: string;
+  description?: string;
   tools: string[];
   metric?: string;
 }[] = [
@@ -19,56 +18,56 @@ const projects: {
     title: "wCookin",
     category: "Landing Page",
     tag: "Mobile App · Landing",
-    problem: "Strong brand visuals, but low conversion on the product page.",
-    solution: "Smarter Health Tracking · Family-Centered Cooking · Detailed Recipe Info · Organized Meal Planning",
+    description: "A high-converting landing page for a family-focused recipe and meal-planning app.",
     tools: ["Figma", "Google Stitch"],
   },
   {
     title: "wCookin",
     category: "UI/UX Design",
     tag: "Food Tech · AI · Mobile App",
-    problem: "Users found it difficult to decide what to cook and lacked clear nutritional insight when planning meals.",
-    solution: "Designed a personalized recipe experience that surfaces relevant meal options with built-in nutrition insights, making meal planning more intuitive and informed.",
-    tools: ["Figma" , "Google Stitch" , "Canva" , "Unsplash"],
+    description: "A personalized recipe discovery experience with built-in nutrition insights and smart meal planning.",
+    tools: ["Figma", "Google Stitch", "Canva", "Unsplash"],
   },
   {
     title: "CashMate",
     category: "UI/UX Design",
     tag: "Accessibility · AI · Mobile App",
-    problem: "Visually impaired users face challenges in accurately identifying banknotes and handling cash transactions independently.",
-    solution: "Designed an accessible mobile experience using AI-based image recognition and voice assistance to support independent currency identification and money handling.",
-    tools: ["Figma" , "Canva"],
+    description: "An accessible mobile app using AI image recognition to help visually impaired users identify currency.",
+    tools: ["Figma", "Canva"],
   },
   {
     title: "Kwar.ta",
     category: "UI/UX Design",
     tag: "FinTech · Mobile App",
-    problem: "Users struggled to track personal finances clearly and manage digital wallet transactions in one place.",
-    solution: "Designed a streamlined finance tracker and digital wallet experience that simplifies expense tracking, balances, and transactions into a clear mobile interface.",
-    tools: ["Figma" , "Canva"],
+    description: "A streamlined finance tracker and digital wallet for effortless personal expense management.",
+    tools: ["Figma", "Canva"],
   },
   {
     title: "Leadership Webinar: Event Countdown",
     category: "Graphics",
     tag: "Event Marketing · Visual Identity",
+    description: "Event countdown visuals for a leadership webinar series.",
     tools: ["Canva"],
   },
   {
     title: "UI/UX Webinar",
     category: "Graphics",
     tag: "Event Branding · Promotional Materials",
+    description: "Promotional branding materials for a UI/UX design webinar.",
     tools: ["Canva"],
   },
-   {
+  {
     title: "University Campaign Pubmats",
     category: "Graphics",
     tag: "Campaign Branding · Marketing Materials",
+    description: "Campaign publication materials for a university marketing initiative.",
     tools: ["Canva"],
   },
   {
     title: "Callbox Webinar Events",
     category: "Graphics",
     tag: "Campaign Branding · Marketing Materials · Digital Assets",
+    description: "Digital event assets and branding for Callbox webinar campaigns.",
     tools: ["Canva"],
   },
 ];
