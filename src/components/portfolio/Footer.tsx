@@ -6,7 +6,7 @@ export const Footer = () => {
           <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-violet text-primary-foreground text-xs">K</span>
           Kaye<span className="text-primary">.</span>
         </div>
-        <p>© {new Date().getFullYear()} Kaye — UX/UI Designer. Crafted with care.</p>
+        <p>© {new Date().getFullYear()} Kaye — UX/UI Designer. Design with intention.</p>
         <div className="flex items-center gap-5">
           <a href="#about" className="hover:text-primary transition-smooth">About</a>
           <a href="#projects" className="hover:text-primary transition-smooth">Work</a>
