@@ -1,9 +1,41 @@
 import { Reveal } from "./Reveal";
 import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
 
-const projects = [
+type Category = "Landing Page" | "UI/UX Design" | "Graphics";
+
+const categories: ("All" | Category)[] = ["All", "Landing Page", "UI/UX Design", "Graphics"];
+
+const projects: {
+  title: string;
+  category: Category;
+  tag: string;
+  problem: string;
+  solution: string;
+  tools: string[];
+  metric: string;
+}[] = [
+  {
+    title: "Bloom Skincare",
+    category: "Landing Page",
+    tag: "E-commerce · Landing",
+    problem: "Beautiful brand, low conversion on the product landing page.",
+    solution: "Restructured the page around social proof and benefit-led copy with a sticky add-to-cart.",
+    tools: ["Figma", "Shopify", "GA4"],
+    metric: "+38% revenue per visitor",
+  },
+  {
+    title: "Pulse Webinar",
+    category: "Landing Page",
+    tag: "SaaS · Lead Gen",
+    problem: "Paid traffic landed but barely converted into signups.",
+    solution: "Designed a high-contrast hero, clear value stack, and frictionless 2-field form.",
+    tools: ["Figma", "Webflow", "GA4"],
+    metric: "+3.1x signup rate",
+  },
   {
     title: "Lumen Finance",
+    category: "UI/UX Design",
     tag: "Fintech · Web App",
     problem: "Users abandoned the onboarding flow at the KYC step.",
     solution: "Redesigned the flow into 3 progressive steps with inline validation — completion jumped from 41% to 78%.",
@@ -11,32 +43,37 @@ const projects = [
     metric: "+90% onboarding completion",
   },
   {
-    title: "Bloom Skincare",
-    tag: "E-commerce · Landing",
-    problem: "Beautiful brand, low conversion on PDPs.",
-    solution: "Restructured PDPs around social proof and benefit-led copy with a sticky add-to-cart.",
-    tools: ["Figma", "Shopify", "GA4"],
-    metric: "+38% revenue per visitor",
-  },
-  {
-    title: "Northwind SaaS",
-    tag: "B2B SaaS · Dashboard",
-    problem: "New users couldn't find the value in the first session.",
-    solution: "Designed a contextual onboarding tour and revamped the empty states.",
-    tools: ["Figma", "Mixpanel", "Notion"],
-    metric: "+62% activation rate",
-  },
-  {
     title: "Aurora Wellness",
+    category: "UI/UX Design",
     tag: "Mobile · Health",
     problem: "Habit-tracking screens overwhelmed first-time users.",
     solution: "Simplified the daily view into a single focused card with gentle motion cues.",
     tools: ["Figma", "ProtoPie", "UserTesting"],
     metric: "+2.4x daily active usage",
   },
+  {
+    title: "Northwind Brand Kit",
+    category: "Graphics",
+    tag: "Branding · Visual Identity",
+    problem: "A scaling SaaS lacked a cohesive visual system across channels.",
+    solution: "Crafted a modular brand kit — logo, palette, social templates and ad creatives.",
+    tools: ["Figma", "Illustrator", "Photoshop"],
+    metric: "1 unified brand system",
+  },
+  {
+    title: "Velvet Social Set",
+    category: "Graphics",
+    tag: "Social · Ad Creatives",
+    problem: "Inconsistent ad creatives diluted campaign performance.",
+    solution: "Designed a 30-piece social and ad system with reusable templates and motion variants.",
+    tools: ["Figma", "Photoshop", "After Effects"],
+    metric: "+47% CTR on paid social",
+  },
 ];
 
 export const Projects = () => {
+  const [active, setActive] = useState<"All" | Category>("All");
+  const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
   return (
     <section id="projects" className="relative py-28 bg-gradient-soft overflow-hidden">
       <div aria-hidden className="absolute top-1/2 -left-40 w-[400px] h-[400px] bg-gradient-violet opacity-10 blur-3xl rounded-full" />
@@ -48,8 +85,29 @@ export const Projects = () => {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid md:grid-cols-2 gap-6">
-          {projects.map((p, i) => (
+        <Reveal>
+          <div className="mt-10 flex flex-wrap gap-2">
+            {categories.map((c) => {
+              const isActive = active === c;
+              return (
+                <button
+                  key={c}
+                  onClick={() => setActive(c)}
+                  className={`px-5 py-2 rounded-full text-sm font-semibold border transition-smooth ${
+                    isActive
+                      ? "bg-gradient-violet text-primary-foreground border-transparent shadow-soft"
+                      : "bg-white/60 text-primary border-primary/20 hover:border-primary/50 hover:bg-primary/5"
+                  }`}
+                >
+                  {c}
+                </button>
+              );
+            })}
+          </div>
+        </Reveal>
+
+        <div className="mt-10 grid md:grid-cols-2 gap-6">
+          {filtered.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
               <article className="group relative h-full rounded-3xl glass p-7 md:p-8 shadow-card hover:shadow-glow hover:-translate-y-1.5 transition-smooth border border-primary/5 hover:border-primary/30">
                 <div className="aspect-[16/9] rounded-2xl bg-gradient-violet relative overflow-hidden mb-7">
