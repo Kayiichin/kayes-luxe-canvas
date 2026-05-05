@@ -41,7 +41,7 @@ export const Hero = () => {
           <div className="lg:col-span-7 animate-fade-in-up">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 glass text-xs font-semibold text-primary shadow-soft">
               <Sparkles className="w-3.5 h-3.5" />
-              Summa Cum Laude · UX/UI Designer
+             UX/UI Designer • Web & Landing Page Designer • Graphic Designer • Digital Marketing
             </span>
             <h1 className="mt-6 font-display font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-foreground">
               Designing experiences that{" "}
@@ -72,7 +72,7 @@ export const Hero = () => {
             </h1>
             <p className="mt-7 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               Hi, I'm <span className="font-semibold text-foreground">Kaye</span> — a
-              Summa Cum Laude UX/UI Designer crafting user-centered, conversion-driven
+              UX/UI Designer crafting user-centered, conversion-driven
               digital experiences for brands that want to grow, not just exist.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -86,23 +86,7 @@ export const Hero = () => {
               </Button>
             </div>
 
-            <div className="mt-12 flex items-center gap-8 text-sm text-muted-foreground">
-              <div>
-                <div className="font-display font-bold text-2xl text-foreground">50+</div>
-                <div>Projects shipped</div>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div>
-                <div className="font-display font-bold text-2xl text-foreground">3x</div>
-                <div>Avg. CVR lift</div>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div>
-                <div className="font-display font-bold text-2xl text-foreground">12+</div>
-                <div>Countries served</div>
-              </div>
-            </div>
-          </div>
+        
 
           {/* Floating UI mockup */}
           <div className="lg:col-span-5 relative h-[500px] hidden lg:block">
@@ -112,7 +96,7 @@ export const Hero = () => {
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold text-muted-foreground">Conversion</span>
-                <span className="text-xs font-bold text-primary">+248%</span>
+                <span className="text-xs font-bold text-primary">+100%</span>
               </div>
               <div className="mt-3 h-24 rounded-xl bg-gradient-violet relative overflow-hidden">
                 <svg viewBox="0 0 200 80" className="absolute inset-0 w-full h-full">
@@ -137,7 +121,7 @@ export const Hero = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-sm text-foreground">Design system</div>
-                  <div className="text-xs text-muted-foreground">128 components</div>
+                  <div className="text-xs text-muted-foreground">100+ components</div>
                 </div>
               </div>
               <div className="mt-4 flex gap-2">
