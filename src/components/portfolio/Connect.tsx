@@ -3,11 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Download, FileText, Mail, MessageCircle, Linkedin, Facebook, Phone } from "lucide-react";
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/kaye", handle: "/in/kaye" },
-  { icon: Facebook, label: "Facebook", href: "https://facebook.com/kaye", handle: "@kaye" },
-  { icon: Mail, label: "Email", href: "mailto:hello@kaye.design", handle: "hello@kaye.design" },
-  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/971500000000", handle: "+971 50 000 0000" },
-  { icon: Phone, label: "Contact", href: "tel:+971500000000", handle: "+971 50 000 0000" },
+  { icon: Linkedin, label: "LinkedIn", href: "www.linkedin.com/in/kaye-bearneza", handle: "/in/kaye" },
+  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/chxn0402e", handle: "@chxn0402" },
+  { icon: Mail, label: "Email", href: "kayebearnezaa@gmail.com", handle: "kayebearnezaa@gmail.com" },
+  { icon: MessageCircle, label: "WhatsApp", "tel: +63 994 052 4366", handle: "+63 994 052 4366" },
 ];
 
 export const Connect = () => {
